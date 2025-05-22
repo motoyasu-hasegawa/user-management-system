@@ -37,7 +37,6 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
   const onSubmit: SubmitHandler<RegisterFormInputs> = async (data) => {
     try {
       // APIを呼び出してユーザーを登録
-      await createUser(data);
       setSuccessMessage("ユーザーが正常に登録されました。");
       setErrorMessage(null);
       if (onSuccess) onSuccess(); // 成功時のコールバック
